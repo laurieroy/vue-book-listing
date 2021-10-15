@@ -6,16 +6,24 @@
         >{{ book.title }}:{{ book.author }}</book-item
       >
     </ul>
+    <book-form @addBook="appendBook"></book-form>
   </div>
 </template>
 
 <script>
+import BookForm from "./BookForm";
 import BookItem from "./BookItem";
 
 export default {
   name: "BookList",
   components: {
-    BookItem
+    BookForm,
+    BookItem,
+  },
+  methods: {
+    appendBook(bookTitle, bookAuthor) {
+      this.books.push({ title: bookTitle, author: bookAuthor });
+    },
   },
   data() {
     return {
