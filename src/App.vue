@@ -1,12 +1,12 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png" />
+    <img src="./assets/logo.png">
     <book-list></book-list>
   </div>
 </template>
 
 <script>
-import BookList from "./components/BookList.vue";
+import BookList from "./components/BookList";
 
 export default {
   name: "app",
